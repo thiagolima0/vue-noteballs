@@ -3,7 +3,7 @@
     <AddEditNote v-model="newNote" ref="addEditNoteRef">
       <template #buttons>
         <button @click="addNotes" class="button is-link has-background-success">
-          Add New Note
+          Add new note
         </button>
       </template>
     </AddEditNote>
