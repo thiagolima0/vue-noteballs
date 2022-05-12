@@ -7,7 +7,7 @@
           @input="$emit('update:modelValue', modelValue)"
           ref="newNoteRef"
           class="textarea"
-          placeholder="new note"
+          placeholder="add new note"
         ></textarea>
       </div>
     </div>
