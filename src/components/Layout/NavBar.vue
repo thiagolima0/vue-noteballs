@@ -2,7 +2,9 @@
   <nav class="navbar is-success" role="navigation" aria-label="main navigation">
     <div class="container is-max-desktop">
       <div class="navbar-brand">
-        <div class="navbar-item is-size-4 ml-2 is-family-monospace">Noteballs</div>
+        <div class="navbar-item is-size-4 ml-2 is-family-monospace">
+          <RouterLink to="/">Noteballs</RouterLink>
+        </div>
 
         <a
           @click.prevent="showMenu = !showMenu"
