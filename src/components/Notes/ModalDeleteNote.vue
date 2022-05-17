@@ -19,7 +19,12 @@
 
 <script setup>
 import { ref } from "vue";
-import { onClickOutside } from "@vueuse/core";
+import { onClickOutside, onKeyDown } from "@vueuse/core";
+
+onKeyDown("Escape", (e) => {
+  closeModal();
+  e.preventDefault();
+});
 
 defineProps({
   modelValue: Boolean,
