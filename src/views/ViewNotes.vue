@@ -2,7 +2,7 @@
   <div class="notes">
     <AddEditNote v-model="newNote" ref="addEditNoteRef">
       <template #buttons>
-        <button @click="addNotes" class="button is-link has-background-success">
+        <button @click="addNotes" :disabled="!newNote.length" class="button is-link has-background-success">
           Add new note
         </button>
       </template>

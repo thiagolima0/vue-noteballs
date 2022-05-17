@@ -10,6 +10,7 @@
     </div>
     <footer class="card-footer">
       <RouterLink
+        @click="onEditNote"
         :to="{ name: 'edit-note', params: { id: note.id } }"
         class="card-footer-item"
         >Edit</RouterLink
@@ -43,4 +44,8 @@ const charactersLength = computed(() => {
   }
   return `${total} character`;
 });
+
+const onEditNote = () => {
+  storeNotes.setNote(props.note.content);
+};
 </script>

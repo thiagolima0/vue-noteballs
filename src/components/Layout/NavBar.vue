@@ -27,11 +27,21 @@
         :class="{ 'is-active': showMenu }"
       >
         <div class="navbar-end">
-          <RouterLink to="/" class="navbar-item" active-class="is-active">
+          <RouterLink
+            @click.prevent="showMenu = false"
+            to="/"
+            class="navbar-item"
+            active-class="is-active"
+          >
             Notes
           </RouterLink>
 
-          <RouterLink to="/stats" class="navbar-item" active-class="is-active">
+          <RouterLink
+            @click.prevent="showMenu = false"
+            to="/stats"
+            class="navbar-item"
+            active-class="is-active"
+          >
             Stats
           </RouterLink>
         </div>
