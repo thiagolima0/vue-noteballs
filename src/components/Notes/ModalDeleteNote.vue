@@ -40,7 +40,7 @@ const closeModal = () => {
 
 const modalRef = ref(null);
 
-onClickOutside(modalRef, () => emit("update:modelValue", false));
+onClickOutside(modalRef, () => closeModal);
 
 const emit = defineEmits(["update:modelValue", "confirm"]);
 </script>
