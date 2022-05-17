@@ -3,7 +3,7 @@
     <div class="container is-max-desktop">
       <div class="navbar-brand">
         <div class="navbar-item is-size-4 ml-2 is-family-monospace">
-          <RouterLink to="/">Noteballs</RouterLink>
+          <RouterLink class="has-text-white" to="/">Noteballs</RouterLink>
         </div>
 
         <a

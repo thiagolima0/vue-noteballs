@@ -32,7 +32,6 @@ const storeNotes = useStoreNotes();
 const route = useRoute();
 const router = useRouter();
 
-
 const props = defineProps({
   id: String,
 });

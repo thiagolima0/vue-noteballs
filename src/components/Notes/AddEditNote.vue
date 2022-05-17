@@ -9,6 +9,8 @@
           ref="newNoteRef"
           class="textarea"
           :placeholder="placeholder"
+          maxlength="100"
+          v-autofocus
         ></textarea>
       </div>
     </div>
@@ -22,6 +24,7 @@
 
 <script setup>
 import { ref, computed } from "vue";
+import {vAutofocus} from "@/directives/vAutofocus"
 
 const props = defineProps({
   modelValue: {
@@ -54,4 +57,5 @@ const colorClass = computed(() => {
 defineExpose({
   focusTextArea,
 });
+
 </script>
