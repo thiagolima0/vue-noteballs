@@ -14,6 +14,7 @@
           aria-label="menu"
           aria-expanded="false"
           data-target="navbarBasicExample"
+          ref="navItemsRef"
         >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -25,6 +26,7 @@
         id="navbarBasicExample"
         class="navbar-menu"
         :class="{ 'is-active': showMenu }"
+        ref="navMenuRef"
       >
         <div class="navbar-end">
           <RouterLink
@@ -52,8 +54,15 @@
 
 <script setup>
 import { ref } from "vue";
+import { onClickOutside } from "@vueuse/core";
 
 const showMenu = ref(false);
+const navMenuRef = ref(null);
+const navItemsRef = ref(null);
+
+onClickOutside(navMenuRef, () => (showMenu.value = false), {
+  ignore: [navItemsRef],
+});
 </script>
 
 <style scoped>
